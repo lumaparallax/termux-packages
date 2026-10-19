@@ -3,6 +3,7 @@ TERMUX_PKG_DESCRIPTION="Free and open source software for live streaming and scr
 TERMUX_PKG_LICENSE="GPL-2.0-or-later"
 TERMUX_PKG_MAINTAINER="@termux"
 TERMUX_PKG_API_LEVEL=26
+TERMUX_PKG_REVISION=2
 TERMUX_PKG_VERSION=(
 	"32.2.2"
 	"5.7.3"
