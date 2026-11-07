@@ -1,0 +1,25 @@
+From 15cd3a45d6cf81c15ec4745288feff24cb83ddd5 Mon Sep 17 00:00:00 2001
+From: lumaparallax <257510328+lumaparallax@users.noreply.github.com>
+Date: Sat, 7 Nov 2026 14:13:26 +0900
+Subject: [PATCH] fix versionsort in v4l2
+
+---
+ plugins/linux-v4l2/v4l2-output.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/plugins/linux-v4l2/v4l2-output.c b/plugins/linux-v4l2/v4l2-output.c
+index 724e6767a..614d81dda 100644
+--- a/plugins/linux-v4l2/v4l2-output.c
++++ b/plugins/linux-v4l2/v4l2-output.c
+@@ -244,7 +244,7 @@ static bool virtualcam_start(void *data)
+ 
+ 	n = scandir("/dev", &list, scanfilter,
+ #if defined(__linux__)
+-		    versionsort
++		    alphasort
+ #else
+ 		    alphasort
+ #endif
+-- 
+2.56.0
+
