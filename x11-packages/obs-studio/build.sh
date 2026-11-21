@@ -7,6 +7,7 @@ TERMUX_PKG_VERSION=(
 	"33.0.1"
 	"5.7.6"
 )
+TERMUX_PKG_REVISION=1
 TERMUX_PKG_SRCURL=(
 	"https://github.com/obsproject/obs-studio/archive/refs/tags/${TERMUX_PKG_VERSION[0]}.tar.gz"
 	"https://github.com/obsproject/obs-websocket/archive/refs/tags/${TERMUX_PKG_VERSION[1]}.tar.gz"
@@ -25,7 +26,8 @@ TERMUX_PKG_EXTRA_CONFIGURE_ARGS="
 -DENABLE_DECKLINK=OFF
 -DENABLE_JACK=OFF
 -DENABLE_SNDIO=OFF
--DENABLE_V4L2=OFF
+-DENABLE_V4L2=ON
+-DENABLE_UDEV=OFF
 -DENABLE_VST=OFF
 -DENABLE_ALSA=OFF
 -DENABLE_PIPEWIRE=OFF
